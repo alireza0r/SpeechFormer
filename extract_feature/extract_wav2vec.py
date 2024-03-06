@@ -45,8 +45,8 @@ if __name__ == '__main__':
     wav2vec.eval()
 
     #### use extract_wav2vec
-    # wavfile = xxx
-    # savefile = xxx
-    # extract_wav2vec(wavfile, savefile)
+    wavfile = "./SpeechFormer/metadata/dataset/data/"
+    savefile = "./SpeechFormer/metadata/dataset/features/"
+    extract_wav2vec(wavfile, savefile)
     
     
