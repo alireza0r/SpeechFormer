@@ -27,7 +27,18 @@ if __name__ == '__main__':
     #### use extract_spec
     # wavfile = xxx
     # savefile = xxx
-    wavfile = "./SpeechFormer/metadata/dataset/data/"
-    savefile = "./SpeechFormer/metadata/dataset/features/"
-    extract_spec(wav_file, savefile, nfft, hop)
+    # extract_spec(wav_file, savefile, nfft, hop)
+
+    # wavfile = "./SpeechFormer/metadata/dataset/data/"
+    savefile = "./SpeechFormer/metadata/dataset/wav_spec_20ms_mat/"
+    if not os.path.exists(savefile):
+      os.makedirs(savefile)
+    # wavfile = "./SpeechFormer/metadata/dataset/data/content/selected_audio/300_s0_AUDIO.wav"
+    wavepath = "./SpeechFormer/metadata/dataset/data/content/selected_audio/"
+    
+    for f in glob(wavepath + '/*.wav'):
+      file_name = os.path.split(f)[-1].split('.wav')[0]
+      file_name = os.path.join(savefile, file_name)
+      # print(file_name)
+      extract_spec(f, file_name, nfft, hop)
     
