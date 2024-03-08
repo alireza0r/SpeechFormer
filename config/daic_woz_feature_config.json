@@ -7,7 +7,7 @@
 
     "spec": {
         "feature_dim": 161, 
-        "matdir": "/your_feature_path/wav_spec_20ms_mat",
+        "matdir": "./SpeechFormer/metadata/dataset/wav_spec_20ms_mat",
         "matkey": "spec", 
         "length": 1076,
         "pad_value": -80,
