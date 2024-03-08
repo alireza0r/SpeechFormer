@@ -27,5 +27,7 @@ if __name__ == '__main__':
     #### use extract_spec
     # wavfile = xxx
     # savefile = xxx
-    # extract_spec(wav_file, savefile, nfft, hop)
+    wavfile = "./SpeechFormer/metadata/dataset/data/"
+    savefile = "./SpeechFormer/metadata/dataset/features/"
+    extract_spec(wav_file, savefile, nfft, hop)
     
