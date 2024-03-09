@@ -3,7 +3,7 @@
 
     "evaluate": ["F1"], 
     
-    "meta_csv_file": "/your_metadata_file_path/metadata.csv",
+    "meta_csv_file": "./SpeechFormer/metadata/dataset/metadata.csv",
 
     "spec": {
         "feature_dim": 161, 
