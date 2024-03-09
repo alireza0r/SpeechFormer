@@ -3,7 +3,7 @@
 
     "evaluate": ["F1"], 
     
-    "meta_csv_file": "./metadata/metadata_daicwoz_crop_resample.csv",
+    "meta_csv_file": "./metadata/metadata_daicwoz_crop_resample_new.csv",
 
     "spec": {
         "feature_dim": 161, 
@@ -27,7 +27,7 @@
 
     "logmel": {
         "feature_dim": 128, 
-        "matdir": "/your_feature_path/logmel_25ms_mat",
+        "matdir": "./metadata/dataset/wav_spec_20ms_mat",
         "matkey": "logmel", 
         "length": 1074,
         "pad_value": 0,
