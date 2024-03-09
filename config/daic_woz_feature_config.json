@@ -3,11 +3,11 @@
 
     "evaluate": ["F1"], 
     
-    "meta_csv_file": "./SpeechFormer/metadata/metadata_daicwoz_crop_resample.csv",
+    "meta_csv_file": "./metadata/metadata_daicwoz_crop_resample.csv",
 
     "spec": {
         "feature_dim": 161, 
-        "matdir": "./SpeechFormer/metadata/dataset/wav_spec_20ms_mat",
+        "matdir": "./metadata/dataset/wav_spec_20ms_mat",
         "matkey": "spec", 
         "length": 1076,
         "pad_value": -80,
