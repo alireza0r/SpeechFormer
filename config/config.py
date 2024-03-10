@@ -6,7 +6,7 @@ _C.model = CN(new_allowed=True)
 _C.dataset = CN(new_allowed=True)
 
 _C.train.device = 'cuda'
-_C.train.num_workers = 8
+_C.train.num_workers = 2
 
 # Choose the type of the model
 _C.model.type = 'SpeechFormer'   # Transformer, SpeechFormer
