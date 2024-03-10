@@ -310,6 +310,8 @@ def main_worker(local_rank, cfg, world_size, dist_url):
         criterion = ['accuracy', 'precision', 'recall', 'F1']
         evaluate = cfg.train.evaluate
         outfile = f'result/result_{cfg.model.type}.csv'
+        if not os.path.exists('result/'):
+            os.makedirs('result/')
         utils.write_result.path_to_csv(os.path.dirname(cfg_clone.workshop), criterion, evaluate, csvfile=outfile)
 
 def main(cfg):
