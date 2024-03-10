@@ -55,12 +55,12 @@
 
     "daic_woz": {
         "spec": {
-            "train.EPOCH": 60,
+            "train.EPOCH": 2,
             "train.batch_size": 16,
             "train.lr": 0.0005
         },
         "logmel": {
-            "train.EPOCH": 60,
+            "train.EPOCH": 2,
             "train.batch_size": 16,
             "train.lr": 0.0005
         },
