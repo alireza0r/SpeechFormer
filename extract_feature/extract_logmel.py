@@ -40,5 +40,17 @@ if __name__ == '__main__':
     # wavfile = xxx
     # savefile = xxx
     # extract_logmel(wavfile, savefile, window_size, hop, ham_window, filter_bank)
+    savefile = "metadata/dataset/wav_log/"
+    if not os.path.exists(savefile):
+      os.makedirs(savefile)
+    # wavfile = "./SpeechFormer/metadata/dataset/data/content/selected_audio/300_s0_AUDIO.wav"
+    wavepath = "metadata/dataset/data/content/selected_audio/"
+    
+    for f in glob(wavepath + '/*.wav'):
+      file_name = os.path.split(f)[-1].split('_')[:-1]
+      file_name = '_'.join(file_name)
+      file_name = os.path.join(savefile, file_name+'.mat')
+      # print(file_name)
+      extract_logmel(f, file_name, window_size, hop, ham_window, filter_bank)
 
     
