@@ -41,23 +41,31 @@ You can also pass the hyper-parameters from the command line for convenience, mo
   
 ## Train model based on DAIC-WOZ
 ```
-cd SpeechFormer/metadata
-mkdir dataset
+mkdir SpeechFormer/metadata/dataset
 ```
 
 * Download dataset
   ```
-  wget [URL] data.zip
-  wget [URL] transcript.zip
-  unzip transcript.zip -d transcript
-  unzip data.zip -d data
+  wget [URL] -O data_downloaded
+  wget [URL] -O transcript_downloaded
+  unzip transcript_downloaded -d transcript
+  unzip data_downloaded -d data
 
   mv -r transcript SpeechFormer/metadata/dataset/
   mv -r data SpeechFormer/metadata/dataset/
   ```
+
+* Change dir
+```
+%cd ./SpeechFormer
+```
   
 * Extract features
-  File extract_spec.py is changed
   ```
   python ./extract_feature/extract_spec.py
   ```
+
+* Run model based on configuration files
+```
+python train_model.py
+```
