@@ -61,6 +61,17 @@ if __name__ == '__main__':
       file_name = '_'.join(file_name)
       file_name = os.path.join(savefile, file_name+'.mat')
 
-      extract_wav2vec(f, file_name)
+      # extract_wav2vec(f, file_name)
+      if os.path.isfile(file_name):
+        print(file_name, 'is exist')
+      else:
+        try:
+          extract_wav2vec(f, file_name)
+        except:
+          print(file_name, 'has problem')
+          problems_file.append(file_name)
+
+    print('*'*30)
+    print(problems_file)
     
     
