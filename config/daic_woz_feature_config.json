@@ -17,7 +17,7 @@
 
     "wav2vec": {
         "feature_dim": 512, 
-        "matdir": "/your_feature_path/wav_wav2vec_mat",
+        "matdir": "./metadata/dataset/features/",
         "matkey": "wav", 
         "length": 1074,
         "pad_value": 0,
