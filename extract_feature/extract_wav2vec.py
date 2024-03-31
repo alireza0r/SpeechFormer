@@ -40,7 +40,7 @@ if __name__ == '__main__':
     Pre-trained wav2vec model is available at https://github.com/pytorch/fairseq/blob/main/examples/wav2vec.
     Download model and save at model_path.
     '''
-    model_path = './pre_trained_model/wav2vec/wav2vec_large.pt'
+    model_path = './pre_trained_model/wav2vec/wav2vec_small.pt'
     sample_rate = 16000    # input should be resampled to 16kHz!
     # cp = torch.load(model_path, map_location='cpu')
     # wav2vec = Wav2VecModel.build_model(cp['args'], task=None)
@@ -56,6 +56,7 @@ if __name__ == '__main__':
     savefile = "metadata/dataset/features/"
     os.makedirs(savefile, exist_ok=True)
 
+    problems_file = []
     for f in glob(wavfile + '/*.wav'):
       file_name = os.path.split(f)[-1].split('_')[:-1]
       file_name = '_'.join(file_name)
