@@ -53,7 +53,7 @@ if __name__ == '__main__':
 
     #### use extract_wav2vec
     wavfile = "metadata/dataset/data/content/selected_audio/"
-    savefile = "metadata/dataset/features/"
+    savefile = "/content/MyDrive/MyDrive/AR_code/PreProcessed_Data/"
     os.makedirs(savefile, exist_ok=True)
 
     problems_file = []
